@@ -1,0 +1,43 @@
+/* CSS */
+
+.header {
+  padding: 20px 0;
+}
+
+.list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+.bar{
+  display: none;
+}
+@media screen and (max-width:890px) {
+  .list,.search{
+    display: none;
+  }
+  .bar{
+    display: block;
+  }
+}
+.list a{
+  color:#0D0E43 ;
+}
+
+
+.header .active{
+  color: var(--main-color);
+}
+.search button{
+  border: none;
+  outline: none;
+  background-color: var(--main-color);
+  padding: 8px 13px;
+}
+.search input{
+    border: none;
+    outline: none;
+}
+.search form{
+  border: 1px solid #E7E6EF;
+}

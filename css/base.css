@@ -1,0 +1,50 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+:root {
+  --main-color: #fb2e86;
+  --main-font: "Lato", sans-serif;
+  --green: #08d15f;
+}
+
+
+.btn {
+    border: none;
+  outline: none;
+  color: white;
+  padding: 16px 40px;
+  border-radius: 2px;
+}
+
+.btn-main-color {
+  background-color: var(--main-color);
+}
+
+.btn-green {
+  background-color: var(--green);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  margin: auto;
+  width:80%;
+}
