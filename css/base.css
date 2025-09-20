@@ -1,4 +1,4 @@
-
+/* base file */
 * {
   margin: 0;
   padding: 0;
@@ -13,16 +13,14 @@ ul {
   list-style: none;
 }
 
-
 :root {
   --main-color: #fb2e86;
   --main-font: "Lato", sans-serif;
   --green: #08d15f;
 }
 
-
 .btn {
-    border: none;
+  border: none;
   outline: none;
   color: white;
   padding: 16px 40px;
@@ -46,5 +44,29 @@ ul {
 
 .container {
   margin: auto;
-  width:80%;
+  width: 80%;
+}
+
+.text-white {
+  color: #EEEFFB;
+}
+
+.flex-direction {
+  flex-direction: column;
+}
+
+.d-flex {
+  display: flex;
+}
+.gap1{
+  gap: 5px;
+}
+.gap2{
+  gap: 10px;
+}
+.gap3{
+  gap: 15px;
+}
+.gap4{
+  gap: 20px;
 }
