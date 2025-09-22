@@ -18,7 +18,15 @@ ul {
   --main-font: "Lato", sans-serif;
   --green: #08d15f;
 }
-
+.btn1{
+  background-color: #F701A8;
+}
+.btn2{
+  background-color: #00009D;
+}
+.btn3{
+  background-color: #05E6B7;
+}
 .btn {
   border: none;
   outline: none;
@@ -58,17 +66,20 @@ ul {
 .d-flex {
   display: flex;
 }
-.gap1{
+.gap5{
   gap: 5px;
 }
-.gap2{
+.gap10{
   gap: 10px;
 }
-.gap3{
+.gap15{
   gap: 15px;
 }
-.gap4{
+.gap20{
   gap: 20px;
+}
+.gap12{
+  gap: 12px;
 }
 .btn-shop{
   padding: 10px 20px;
