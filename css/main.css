@@ -60,7 +60,24 @@
 .search form {
   border: 1px solid #E7E6EF;
 }
-
+/* end header */
+/*newslater*/
+.newslater{
+background-image: url("./../img/public/later.png");
+background-attachment: fixed;
+padding: 174px 0;
+text-align: center;
+}
+.newslater h2{
+  margin-bottom: 28px;
+  color: #151875;
+  font-size: 35px;
+}
+.newslater a:hover{
+  background-color: #0D0E43;
+  transition: all 0.5s;
+}
+/*end newslater*/
 /* Footer */
 .footer {
   background-color: #EEEFFB;
@@ -108,3 +125,4 @@ align-items: flex-start;
     text-align: center;
   }
 }
+/*end footer*/
