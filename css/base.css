@@ -62,7 +62,9 @@ ul {
 .flex-direction {
   flex-direction: column;
 }
-
+.flex-wrap{
+  flex-wrap: wrap;
+}
 .d-flex {
   display: flex;
 }
