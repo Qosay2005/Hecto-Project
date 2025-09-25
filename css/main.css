@@ -345,11 +345,66 @@ gap: 60px;
 /*end leatest product*/
 
 /*shopex offer*/
-.shops{
-  display: flex;
-  
+.shopex-offer{
+  padding: 50px 0;
+}
+.shopex-offer.row{
+  flex-wrap: nowrap;
+  overflow-x: auto ;
+  gap: 20px;
+}
+.shopex-offer img{
+  margin-bottom:20px ;
+  object-fit: contain;
+}
+.shopex-offer h1{
+margin-bottom: 55px;
+color: #151875;
+}
+.shopex-offer h2{
+margin-bottom: 55px;
+color: #151875;
+}
+.shopex-offer p{
+  color: #8A8FB9;
+}
+.ig{
+  width: 65px;
+  height: 65px;
+
+}
+.shopex-offer .logo-shop{
+  width: calc( (100% - 60px) / 4 );
 }
 
+@media screen and (max-width:900px) {
+  .shopex-offer .logo-shop{
+   width: calc( (100% - 20px) / 2 );
+  }
+  .shopex-offer h1{
+    font-size: 12px;
+  }
+  .shopex-offer h2{
+    font-size: 10px;
+  }
+   .shopex-offer p{
+    font-size: 8px;
+  }
+}
+@media screen and (max-width:350px) {
+  .shopex-offer .logo-shop{
+   width: calc( (100% - 20px) / 1 );
+  }
+  .shopex-offer h1{
+    font-size: 10px;
+  }
+  .shopex-offer h2{
+    font-size: 8px;
+  }
+   .shopex-offer p{
+    font-size: 6px;
+  }
+}
 /*end shopex offer*/
 
 /*newslater*/
