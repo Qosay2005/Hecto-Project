@@ -407,6 +407,89 @@ color: #151875;
 }
 /*end shopex offer*/
 
+/*trending product*/
+.trend-product{
+  padding: 50px 0;
+}
+.trend-product .row{
+ flex-wrap: nowrap;
+  gap: 20px;
+}
+.trend-product .logo-trend{
+  width: calc( (100% - 60px) / 4 );
+}
+.trend-product h1{
+  margin-bottom: 40px;
+  color: #151875;
+}
+.trend-product h2{
+  color: #151875;
+}
+.trend-product .trend-price .new{
+  color: #151875;
+}
+.trend-product .trend-price .old{
+  color: #8A8FB9;
+  text-decoration: line-through;
+}
+.trend-product img{
+  object-fit: contain;
+  background-color: #F5F6F8;
+  height: 200px;
+ 
+}
+@media screen and (max-width:900px) {
+  .trend-product .row{
+    flex-wrap: wrap;
+  }
+ .logo-trend{
+  width: calc( (100% - 20px) / 2 );
+ }
+ .trend-product h1{
+font-size: 16px;
+ }
+ .trend-product h2{
+ font-size: 14px;
+ }
+ .trend-product .trend-price .old{
+  color: #8A8FB9;
+  text-decoration: line-through;
+  font-size: 10px;
+}
+.trend-product .trend-price .new{
+  color: #151875;
+  font-size: 10px;
+}
+ 
+}
+@media screen and (max-width:400px) {
+  .trend-product .row{
+    flex-wrap: wrap;
+  }
+ .logo-trend{
+  width: calc( (100% - 20px) / 1 );
+ }
+ .trend-product h1{
+font-size: 12px;
+ }
+ .trend-product h2{
+ font-size: 10px;
+ }
+ .trend-product .trend-price .old{
+  color: #8A8FB9;
+  text-decoration: line-through;
+  font-size: 8px;
+}
+.trend-product .trend-price .new{
+  color: #151875;
+  font-size: 8px;
+}
+ 
+
+
+
+}
+/*end trending product*/
 /*newslater*/
 .newslater{
 background-image: url("./../img/public/later.png");
