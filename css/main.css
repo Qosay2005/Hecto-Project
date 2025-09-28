@@ -614,6 +614,16 @@ padding: 8px 10px;
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width:900px) {
+  .top-catogories .catogoriey{
+     width: calc( (100% - 20px) / 2);
+  }
+}
+@media screen and (max-width:400px) {
+  .top-catogories .catogoriey{
+     width: calc( (100% - 20px) / 1);
+  }
+}
 /*end Top Catgories*/
 /*newslater*/
 .newslater{
