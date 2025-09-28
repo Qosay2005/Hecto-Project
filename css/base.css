@@ -71,8 +71,14 @@ ul {
 .d-flex {
   display: flex;
 }
+.gap4{
+  gap: 4px;
+}
 .gap5{
   gap: 5px;
+}
+.gap8{
+  gap: 8px;
 }
 .gap10{
   gap: 10px;
@@ -82,6 +88,9 @@ ul {
 }
 .gap20{
   gap: 20px;
+}
+.gap30{
+  gap: 30px;
 }
 .gap12{
   gap: 12px;
@@ -101,4 +110,7 @@ ul {
 }
 .m10{
   margin-top: 10px;
+}
+.align-start{
+  align-items: flex-start;
 }
