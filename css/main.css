@@ -1,4 +1,9 @@
 /* Header */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 .header {
   padding: 20px 0;
 }
@@ -21,6 +26,9 @@
   .bar {
     display: block;
   }
+  .search button,input{
+    display: none;
+  }
 }
 @media screen and (max-width:1400px) {
   .container{
@@ -36,6 +44,7 @@
   .container{
     width: calc(100% - 40px);
   }
+   
 }
 .list a {
   color: #0D0E43;
@@ -94,32 +103,64 @@ width: 100%;
 .hero-content .btn:hover{
   background-color: #1A0B5B;
 }
-@media screen and(max-width:900px) {
+.item{
+  transition: all 0.4s ease;
+}
+.item:hover{
+transform: scale(1.05);
+}
+@media (max-width: 900px) {
+  .hero-section{
+     padding:40px 0; 
+    }
+
+  .hero-section .row{
+    flex-direction:column;
+    text-align:center;
+    gap:20px;
+  }
+
+  .hero-content, .hero-img{
+    max-width:100%;
+    flex: 1 1 100%;
+    align-items:center;
+  }
+
   .hero-content{
-max-width: 100%;
-  }
- .row{
-  flex-direction: column;
-  text-align: center;
- }
- .hero-content h1{
-  font-size: 20px;
- }
- .hero-content p{
-  font-size: 10px;
- }
-  .btn {
-    padding: 10px 25px;
-    font-size: 14px;
+    align-items:center;
   }
 
-  .hero-img {
-    margin-top: 20px; 
-  }
+  .hero-content h1{
+     font-size: 22px;
+     }
+  .hero-content p{
+     font-size: 14px;
+     }
 
-  .hero-img img {
-    max-width: 70%; 
+  .hero-img img{
+    max-width:80%;
   }
+}
+
+@media (max-width: 480px) {
+  .hero-section{
+     padding:30px 0; 
+    }
+  .hero-logo img{
+     max-width:160px; 
+    }
+  .hero-content h1{
+     font-size:18px; 
+    }
+  .hero-content p{
+     font-size:13px; 
+    }
+  .btn{ 
+    padding:10px 18px; font-size:14px; 
+  }
+  .hero-img img{
+     max-width:90%; 
+    }
 }
 /* end hero section*/
 /* feature product */
@@ -376,6 +417,12 @@ color: #151875;
 .shopex-offer .logo-shop{
   width: calc( (100% - 60px) / 4 );
 }
+.logo-shop{
+  transition: all 0.4s ease;
+}
+.logo-shop:hover{
+  transform: scale(1.05);
+}
 
 @media screen and (max-width:900px) {
   .shopex-offer .logo-shop{
@@ -477,6 +524,12 @@ color: #151875;
 }
 .unique-feature .details-feature .add-feature .description-features{
   color: #151875;
+}
+.add-feature .btn{
+  transition: all .4s ease;
+}
+.add-feature .btn:hover{
+background-color: #1A0B5B;
 }
 @media (max-width: 900px) {
   .unique-feature .row {
@@ -645,9 +698,72 @@ text-align: center;
 }
 /*end newslater*/
 /* client*/
-.client{
-  text-align: center;
+.clients{
+  padding: 50px 0;
+}
 
+.row{
+  display:flex;
+  gap:var(--gap);
+  flex-wrap:wrap; /* on large screens allow wrapping so no horizontal scroll */
+  align-items:center;
+}
+
+/* client item */
+.client{
+  flex: 1 1 calc((100% - (5 * var(--gap))) / 6); /* 6 columns layout when space allows */
+  min-width:120px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px;
+  background:transparent;
+}
+
+.client img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;
+  max-height:80px;
+}
+
+/* -----------------------
+   Responsive: enable horizontal scrolling on smaller screens
+   -----------------------*/
+
+/* Tablet and below: make the row nowrap and horizontally scrollable */
+@media (max-width: 900px) {
+  .row{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:12px; /* space for scrollbar / touch */
+    scroll-snap-type:x mandatory;
+  }
+
+  /* show ~2 items per view on tablets (adjust as needed) */
+  .client{
+    flex: 0 0 calc((100% - var(--gap)) / 2);
+    scroll-snap-align:start;
+    max-width: none;
+  }
+
+  .client img{
+    max-height:100px;
+  }
+}
+
+/* Small phones: one card per view (more prominent) */
+@media (max-width: 480px) {
+  .client{
+    flex: 0 0 80%;
+    scroll-snap-align:center;
+  }
+
+  .client img{
+    max-height:120px;
+  }
 }
 /*end client*/
 
@@ -659,11 +775,7 @@ text-align: center;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+
 
 .leatest-blog {
   padding: 50px 0;
@@ -786,7 +898,7 @@ body {
   color:var(--main-color);
 }
 
-/* responsive */
+
 @media (max-width: 1200px) {
   .leatest-blog .container {
     max-width: 1000px;
@@ -870,17 +982,55 @@ align-items: flex-start;
   gap: 35px;
   width: calc((100% - 10px)/2);
 }
-@media screen and (max-width:993px) {
-  .footer .left-side , .footer.right-side{
-    width: 100%;
+@media (max-width: 993px) {
+  .footer .left-side, .footer .right-side{
+    flex:1 1 100%;
+    min-width:0;
+  }
+
+  .footer .newsletter{
+    flex-direction:row;
+  }
+
+  .footer .sections-row{
+    gap:24px;
   }
 }
-@media screen and (max-width:576px) {
-  .footer .left-side , .footer.right-side{
-    width: 50%;
-  }
+
+/* Small devices: center and full-width inputs, vertical stacking inside sections */
+@media (max-width: 576px) {
   .footer{
-    text-align: center;
+    text-align:center;
+    padding:32px 0;
+  }
+
+  .footer .left-side, .footer .right-side{
+    width:100%;
+    align-items:center;
+  }
+
+  .footer .newsletter{
+    flex-direction:column;
+    gap:10px;
+    align-items:stretch;
+  }
+
+  .newsletter input[type="email"], .btn-signup{
+    width:100%;
+  }
+
+  .footer .sections-row{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .footer .section{
+    align-items:center;
+  }
+
+  .footer .links{
+    align-items:center;
   }
 }
+
 /*end footer*/
